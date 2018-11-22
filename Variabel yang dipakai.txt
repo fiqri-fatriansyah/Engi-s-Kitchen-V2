@@ -12,7 +12,7 @@
     TabCust Customer; // Array berisi customer yang sudah menduduki meja.
     TabOrder Order; // Array berisi order yang dipesan oleh suatu meja.
 
-// VARIABEL DALAM QUEUE CUSTOMER SAAT MENGANTRI (Queue.h)
+// VARIABEL DALAM QUEUE CUSTOMER SAAT MENGANTRI (Queue.h) kandjk
     typedef struct{
         int TotCust; // Singkatan dari Total Customer. Berisi banyak customer di suatu grup.
         int Timer; // Waktu yang tersisa dalam satuan tick yang menentukan lama suatu grup menunggu di antrian. Jika timer mencapai 0, grup meninggalkan antrian (dihapus dari queue) dan Life berkurang 1.
