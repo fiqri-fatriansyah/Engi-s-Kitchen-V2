@@ -30,7 +30,7 @@
     #define MaxEl 20
 
 // VARIABEL DALAM STACK FOOD STACK (Stack.h)
-    typedef char infotype[]; // String berisi nama makanan yang dipesan.
+    typedef char infotype[10]; // String berisi nama makanan yang dipesan.
     typedef int address; // Alamat dari Stack.
 
     typedef struct{
@@ -40,7 +40,7 @@
 
 // VARIABEL DALAM ARRAY ORDER (array.h)
     typedef struct{
-        char Food[]; // String berisi nama makanan yang dipesan.
+        char Food[10]; // String berisi nama makanan yang dipesan.
         int NoMeja; // Nomor meja yang memesan.
     } ElTypeO; // Elemen dari array Order.
 
@@ -60,6 +60,6 @@
     typedef int IdxType; // Indeks dari array.
 
     typedef struct{
-	    ElTypeC TI [IdxMax-IdxMin+1]; // Memori tempat penyimpanan elemen. Jangan lupa didefinisikan nilai IdxMax dan IdxMin!
+	ElTypeC TI [IdxMax-IdxMin+1]; // Memori tempat penyimpanan elemen. Jangan lupa didefinisikan nilai IdxMax dan IdxMin!
     	int Neff; // Banyak elemen efektif.
     } TabCust; // Array berisi customer yang sudah menduduki tempat.
