@@ -1,8 +1,5 @@
-/* File: mesinkata.h */
-/* Definisi Mesin Kata: Model Akuisisi Versi I */
-
-#ifndef __MESINKATA_H__
-#define __MESINKATA_H__
+#ifndef MESINKATA_H
+#define MESINKATA_H
 
 #include "boolean.h"
 #include "mesinkar.h"
@@ -11,13 +8,13 @@
 #define BLANK ' '
 
 typedef struct {
-	char TabKata[NMax+1]; /* container penyimpan kata, indeks yang dipakai [1..NMax] */
+  char TabKata[NMax+1];  //container penyimpan kata, indeks yang dipakai [1..NMax] 
     int Length;
 } Kata;
 
-/* State Mesin Kata */
-extern boolean EndKata;
 extern Kata CKata;
+extern boolean EndKata;
+
 
 void IgnoreBlank();
 /* Mengabaikan satu atau beberapa BLANK
