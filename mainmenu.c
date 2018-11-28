@@ -6,9 +6,9 @@
 int main() {
 // KAMUS
     int com_menu;
-    void TulisEG();
-    void TulisSG();
-    
+    void TulisEG(); //End Game
+    void TulisSG(); //Start Game
+
 // ALGORITMA
     TulisSG();
     printf("Masukkan pilihan menu : ");
