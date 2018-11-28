@@ -1,16 +1,17 @@
 // VARIABEL PROGRAM UTAMA (START.c)
+	int RuangPlayer;
 	char Name[11]; // String berisi nama. Bisa memuat 10 karakter.
 	int Money; // Jumlah uang (skor) yang diraih.
 	int Life=3; // Jumlah kesalahan yang dapat dilakukan oleh pemain (user). Jika Life mencapai 0, permainan berakhir.
 	int Time; // Waktu global dengan satuan tick. Tiap satu command in-game dari pemain (user) menambah 1 tick. Tiap pemain beda-beda, maks 30
-    Queue WaitList; // Queue yang berisi customer yang sedang mengantri.
-    typedef struct{
-        char Food[21]; // String berisi nama makanan yang dipesan.
-        int NoMeja; // Nomor meja yang memesan.
-    } Order; // Sebuah tipe yang menyimpan semua data order yang dipesan oleh suatu grup customer.
-    Stack FoodStack; // Stack berisi semua makanan yang sedang berada di nampan (inventory) player (pemain).
-    TabCust Customer; // Array berisi customer yang sudah menduduki meja.
-    TabOrder Order; // Array berisi order yang dipesan oleh suatu meja.
+	Queue WaitList; // Queue yang berisi customer yang sedang mengantri.
+	typedef struct{
+        	char Food[21]; // String berisi nama makanan yang dipesan.
+        	int NoMeja; // Nomor meja yang memesan.
+	} Order; // Sebuah tipe yang menyimpan semua data order yang dipesan oleh suatu grup customer.
+	Stack FoodStack; // Stack berisi semua makanan yang sedang berada di nampan (inventory) player (pemain).
+	TabCust Customer; // Array berisi customer yang sudah menduduki meja.
+	TabOrder Order; // Array berisi order yang dipesan oleh suatu meja.
 
 // VARIABEL DALAM QUEUE CUSTOMER SAAT MENGANTRI (Queue.h)
     typedef struct{
@@ -18,7 +19,7 @@
         int Timer; // Waktu yang tersisa dalam satuan tick yang menentukan lama suatu grup menunggu di antrian. Jika timer mencapai 0, grup meninggalkan antrian (dihapus dari queue) dan Life berkurang 1.
     } infotype; // Informasi yang terdapat di Queue.
 
-    typedef int address; // Alamat dari Queue;
+    typedef int addressQ; // Alamat dari Queue;
 
     typedef struct{
         infotype *T; // Tabel yang menyimpan informasi Queue.
@@ -37,6 +38,8 @@
         infotype T[MaxEl+1]; // Tabel yang menyimpan informasi Stack. Jangan lupa didefinisikan nilai MaxEl!
         address TOP; // Alamat puncak.
     } Stack; // Stack berisi makanan yang berada dalam nampan (inventory) pemain (user).
+
+	#define MaxEl 10
 
 // VARIABEL DALAM ARRAY ORDER (array.h)
     typedef struct{
