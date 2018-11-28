@@ -6,7 +6,6 @@
 int main() {
 // KAMUS
     char Name[10]; //WARN: udah ada di main.c
-    boolean exit=false; //WARN: harus udah ada di main.c
     boolean input=false;
     int com_menu; //command menu
     void TulisEG(); //End Game
