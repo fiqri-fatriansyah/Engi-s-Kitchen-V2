@@ -1,11 +1,11 @@
 // VARIABEL PROGRAM UTAMA (START.c)
-    char Name[10]; // String berisi nama. Bisa memuat 10 karakter.
-    int Money; // Jumlah uang (skor) yang diraih.
-    int Life=3; // Jumlah kesalahan yang dapat dilakukan oleh pemain (user). Jika Life mencapai 0, permainan berakhir.
-    int Time; // Waktu global dengan satuan tick. Tiap satu command in-game dari pemain (user) menambah 1 tick. Tiap pemain beda-beda, maks 30
+	char Name[11]; // String berisi nama. Bisa memuat 10 karakter.
+	int Money; // Jumlah uang (skor) yang diraih.
+	int Life=3; // Jumlah kesalahan yang dapat dilakukan oleh pemain (user). Jika Life mencapai 0, permainan berakhir.
+	int Time; // Waktu global dengan satuan tick. Tiap satu command in-game dari pemain (user) menambah 1 tick. Tiap pemain beda-beda, maks 30
     Queue WaitList; // Queue yang berisi customer yang sedang mengantri.
     typedef struct{
-        char Food[10]; // String berisi nama makanan yang dipesan.
+        char Food[21]; // String berisi nama makanan yang dipesan.
         int NoMeja; // Nomor meja yang memesan.
     } Order; // Sebuah tipe yang menyimpan semua data order yang dipesan oleh suatu grup customer.
     Stack FoodStack; // Stack berisi semua makanan yang sedang berada di nampan (inventory) player (pemain).
@@ -27,10 +27,10 @@
         int MaxEl; // Maksimum dari elemen Queue.
     } Queue; // Queue berisi data antrian semua grup customer.
 
-    #define MaxEl 20
+    #define MaxEl 10
 
 // VARIABEL DALAM STACK FOOD STACK (Stack.h)
-    typedef char infotype[10]; // String berisi nama makanan yang dipesan.
+    typedef char infotype[21]; // String berisi nama makanan yang dipesan.
     typedef int address; // Alamat dari Stack.
 
     typedef struct{
@@ -40,7 +40,7 @@
 
 // VARIABEL DALAM ARRAY ORDER (array.h)
     typedef struct{
-        char Food[10]; // String berisi nama makanan yang dipesan.
+        char Food[21]; // String berisi nama makanan yang dipesan.
         int NoMeja; // Nomor meja yang memesan.
     } ElTypeO; // Elemen dari array Order.
 
