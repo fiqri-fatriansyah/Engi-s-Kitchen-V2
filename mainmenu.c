@@ -40,7 +40,7 @@ void TulisSG(){
     printf(" | -------------------------------------------------------------------------------------------------------- | \n");
 	printf(" |                                           ENGI'S KITCHEN EXPANSION                                       | \n");
 	printf(" | -------------------------------------------------------------------------------------------------------- | \n");
-	printf("    		        NEW GAME                       START                          EXIT                        \n");
+	printf("    		            NEW GAME                       START                          EXIT                    \n");
 	printf("    	        (Create your name here!)       (Let's play the game!)          (Good to see you!)             \n");
     printf("                          (1)                           (2)                            (3)                    \n");
 	printf("    	                                                                                                      \n");
@@ -55,7 +55,7 @@ void TulisEG () {
 	printf("                   (16517000)                                         (16517000)                   \n");
 	printf("                                                                                                   \n");
 	printf("                                                                                                   \n");
-    printf("               ADINI SAFIRA ZAHRA                             RESHA PUSPITA D                      \n");
-	printf("                   (16517000)                                     (16517000)                       \n");
+    printf("                ADINI SAFIA ZAHRA                                  RESHA PUSPITA D                 \n");
+	printf("                   (16517000)                                         (16517000)                   \n");
 	printf(" | --------------------------------------------------------------------------------------------- | \n");
 }
