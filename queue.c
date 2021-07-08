@@ -33,7 +33,7 @@ void CreateEmpty(Queue *Q,int Max){
    atau : jika alokasi gagal, Q kosong dg Maksimum elemen=0
    Proses : Melakukan alokasi memori dan membuat sebuah Q kosong */
    (*Q).T = (infotype *) malloc ((Max+1) * sizeof (infotype));
-   if ((*Q).T == NULL) {
+   if ((*Q).T == Nil) {
        MaxEl(*Q)=0;
    } else {
        MaxEl(*Q)=Max;

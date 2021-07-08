@@ -107,13 +107,13 @@ boolean EQSize (MATRIKS M1, MATRIKS M2);
 /* yaitu GetBrsEff(M1) = GetNBrsEff (M2) dan GetNKolEff (M1) = GetNKolEff (M2) */
 
 /* ********** Operasi lain ********** */
-int NBElmt (MATRIKS M);
+int NBElmtM (MATRIKS M);
 /* Mengirimkan banyaknya elemen M */
 
 /* ********** KELOMPOK TEST TERHADAP MATRIKS ********** */
 boolean IsBujurSangkar (MATRIKS M);
 /* Mengirimkan true jika M adalah matriks dg ukuran baris dan kolom sama */
-boolean IsSimetri (MATRIKS M);
+boolean IsSimetriM (MATRIKS M);
 /* Mengirimkan true jika M adalah matriks simetri : IsBujurSangkar(M) 
    dan untuk setiap elemen M, M(i,j)=M(j,i) */
 boolean IsSatuan (MATRIKS M);

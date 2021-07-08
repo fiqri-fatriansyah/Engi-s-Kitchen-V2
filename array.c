@@ -18,39 +18,39 @@
 
 /* ********** KONSTRUKTOR ********** */
 /* Konstruktor : create tabel kosong */
-void MakeEmpty (TabInt *T){
+void MakeEmptyArr (TabInt *T){
 	((*T).Neff=0);
 }
 	
 /* ********** SELEKTOR ********** */
 /* *** Banyaknya elemen *** */
-int NbElmt (TabInt T){
+int NbElmtArr (TabInt T){
 	/* Mengirimkan banyaknya elemen efektif tabel */
 	/* Mengirimkan nol jika tabel kosong */
 	return (T.Neff);
 }
 
 /* *** Daya tampung container *** */
-int MaxNbEl (TabInt T){
+int MaxNbElArr (TabInt T){
 	/* Mengirimkan maksimum elemen yang dapat ditampung oleh tabel */
 	return (IdxMax);
 }
 
 /* *** Selektor INDEKS *** */
-IdxType GetFirstIdx (TabInt T){
+IdxTypeArr GetFirstIdxArr (TabInt T){
 	/* Prekondisi : Tabel T tidak kosong */
 	/* Mengirimkan indeks elemen pertama */
 	return (IdxMin);
 }
 	
-IdxType GetLastIdx (TabInt T){
+IdxTypeArr GetLastIdxArr (TabInt T){
 	/* Prekondisi : Tabel T tidak kosong */
 	/* Mengirimkan indeks elemen terakhir */
 	return (T.Neff);
 }
 	
 /* *** Menghasilkan sebuah elemen *** */
-ElType GetElmt (TabInt T, IdxType i){
+ElTypeArr GetElmt (TabInt T, IdxTypeArr i){
 	/* Prekondisi : Tabel tidak kosong, i antara FirstIdx(T)..LastIdx(T) */
 	/* Mengirimkan elemen tabel yang ke-i */
 	return (T.TI[i]);
@@ -69,13 +69,13 @@ void SetTab (TabInt Tin, TabInt *Tout){
 	}
 }
 	
-void SetEl (TabInt *T, IdxType i, ElType v){
+void SetEl (TabInt *T, IdxTypeArr i, ElTypeArr v){
 	/* I.S. T terdefinisi, sembarang */
 	/* F.S. Elemen T yang ke-i bernilai v */
 	/* Mengeset nilai elemen tabel yang ke-i sehingga bernilai v */
 	(*T).TI[i] = v;
 }
-void SetNeff (TabInt *T, IdxType N){
+void SetNeff (TabInt *T, IdxTypeArr N){
 	/* I.S. T terdefinisi, sembarang */
 	/* F.S. Nilai indeks efektif T bernilai N */
 	/* Mengeset nilai indeks elemen efektif sehingga bernilai N */
@@ -83,7 +83,7 @@ void SetNeff (TabInt *T, IdxType N){
 }
 
 /* ********** Test Indeks yang valid ********** */
-boolean IsIdxValid (TabInt T, IdxType i){
+boolean IsIdxValid (TabInt T, IdxTypeArr i){
 	/* Prekondisi : i sembarang */
 	/* Mengirimkan true jika i adalah indeks yang valid utk ukuran tabel */
 	/* yaitu antara indeks yang terdefinisi utk container*/
@@ -95,7 +95,7 @@ boolean IsIdxValid (TabInt T, IdxType i){
 	}
 }
 	
-boolean IsIdxEff (TabInt T, IdxType i){
+boolean IsIdxEff (TabInt T, IdxTypeArr i){
 	/* Prekondisi : i sembarang*/
 	/* Mengirimkan true jika i adalah indeks yang terdefinisi utk tabel */
 	/* yaitu antara FirstIdx(T)..LastIdx(T) */
@@ -109,7 +109,7 @@ boolean IsIdxEff (TabInt T, IdxType i){
 
 /* ********** TEST KOSONG/PENUH ********** */
 /* *** Test tabel kosong *** */
-boolean IsEmpty (TabInt T){
+boolean IsEmptyArr (TabInt T){
 	/* Mengirimkan true jika tabel T kosong, mengirimkan false jika tidak */
 	/* *** Test tabel penuh *** */
 	if (T.Neff == 0){
@@ -120,7 +120,7 @@ boolean IsEmpty (TabInt T){
 	}
 }
 		
-boolean IsFull (TabInt T){
+boolean IsFullArr (TabInt T){
 	/* Mengirimkan true jika tabel T penuh, mengirimkan false jika tidak */
 	if (T.Neff == IdxMax){
 		return true;
